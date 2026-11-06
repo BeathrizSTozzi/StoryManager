@@ -51,4 +51,23 @@ public class Usuario{
             personagens.remove(p);
         }
     }
+
+    public void listarPorUsuario(){
+        if(personagens.isEmpty()){
+            System.out.println("Esse usuario nao tem personagens");
+            return;
+        }
+
+        for(Personagem p : personagens){
+            System.out.println(p.getNome());
+        }
+    }
+
+    public void listarPorCiclo(Ciclo num){
+        for(Personagem p : personagens){
+            if(p.getCiclo() == num){
+                System.out.println(p.getNome());
+            }
+        }
+    }
 }
